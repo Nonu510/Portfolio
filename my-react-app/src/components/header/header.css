@@ -1,1 +1,19 @@
-/*# sourceMappingURL=header.css.map */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.header .header_nav {
+  display: flex;
+  gap: 20px;
+}
+.header .header_nav .header_nav_link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.header .header_nav .header_nav_link:hover {
+  color: grey;
+}/*# sourceMappingURL=header.css.map */
