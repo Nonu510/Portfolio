@@ -3,17 +3,24 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  list-style: none;
+  border-bottom: solid 2px var(--color-border-soft);
 }
-.header .header_nav {
+.header img {
+  width: 50px;
+}
+.header ul {
   display: flex;
+  flex-direction: row;
+  list-style: none;
   gap: 20px;
+  padding: 10px 20px;
+  font-size: 15px;
+  margin: 0;
 }
-.header .header_nav .header_nav_link {
+.header .header_logo {
+  display: flex;
+}
+.header a {
+  color: var(--gradient-accent);
   text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-.header .header_nav .header_nav_link:hover {
-  color: grey;
 }/*# sourceMappingURL=header.css.map */

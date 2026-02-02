@@ -3,17 +3,24 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    list-style: none;
-    .header_nav {
+    border-bottom: solid 2px var(--color-border-soft);
+    img {
+        width: 50px;
+    }
+    ul {
         display: flex;
+        flex-direction: row;
+        list-style: none;
         gap: 20px;
-        .header_nav_link {
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-            &:hover {
-                color: grey;
-            }
-        }
+        padding: 10px 20px;
+        font-size: 15px;
+        margin: 0;
+    }
+    .header_logo {
+        display: flex;
+    }
+    a {
+        color: var(--gradient-accent);
+        text-decoration: none;
     }
 }

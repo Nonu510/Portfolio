@@ -1,0 +1,73 @@
+:root {
+  /* =========================
+     🎨 BACKGROUNDS
+     ========================= */
+  --color-bg-main: #0B0F1A;        /* Background principal (body) */
+  --color-bg-alt: #0F172A;         /* Sections alternées, cards */
+  --color-bg-input: #0F172A;       /* Inputs, textarea */
+
+  /* =========================
+     📝 TEXTES
+     ========================= */
+  --color-text-primary: #E6EAF0;   /* Titres, logo principal */
+  --color-text-secondary: #DDE3EA; /* Paragraphes, descriptions */
+  --color-text-muted: #8892A6;     /* Footer, placeholders */
+
+  /* =========================
+     🌈 ACCENTS & BRAND
+     ========================= */
+  --color-accent-primary: #9B5CFF; /* Violet – CTA, hover, focus */
+  --color-accent-secondary: #4CC3FF; /* Bleu – highlights */
+
+  /* Dégradé principal (logo, boutons) */
+  --gradient-accent: linear-gradient(
+    135deg,
+    var(--color-accent-primary),
+    var(--color-accent-secondary)
+  );
+
+  /* =========================
+     🧩 BORDERS & SHADOWS
+     ========================= */
+  --color-border-soft: rgba(155, 92, 255, 0.15);
+  --color-border-focus: var(--color-accent-primary);
+
+  --shadow-glow-accent: 0 0 25px rgba(155, 92, 255, 0.25);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+  /* =========================
+     ⚙️ TRANSITIONS
+     ========================= */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+}
+
+body {
+  background-color: var(--color-bg-main);
+  color: var(--color-text-secondary);
+}
+
+h1, h2, h3 {
+  color: var(--color-text-primary);
+}
+
+.button-primary {
+  background: var(--gradient-accent);
+  color: var(--color-bg-main);
+  transition: var(--transition-base);
+}
+
+.button-primary:hover {
+  box-shadow: var(--shadow-glow-accent);
+}
+
+
+input, textarea {
+  background: var(--color-bg-input);
+  color: var(--color-text-primary);
+  border: 1px solid transparent;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--color-border-focus);
+}

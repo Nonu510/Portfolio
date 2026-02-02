@@ -1,26 +1,27 @@
 import React from 'react'
 import './App.css'
+import './styles.css'
 
 function App() {
 
   return (
     <>
-      <div className='banner'>
+      <div className='banner' id='home'>
         <h1>DUBOURG Nolwenn</h1>
         <h2>Développeur front-end</h2>
         <p>Je suis passionnée par la création de sites web et d'applications interactives.</p>
       </div>
-      <div className='about'>
+      <div className='about' id='about'>
         <h2>À propos de moi</h2>
         <p>Bienvenue sur mon portfolio ! Je m'appelle Nolwenn Dubourg et je suis développeur front-end. J'adore transformer des idées en expériences numériques attrayantes et fonctionnelles. </p>
       </div>
-      <div className='projects'>
+      <div className='projects' id='projects'>
         <h2>Projets</h2>
           <h3>Projet 1</h3>
           <h3>Projet 2</h3>
           <h3>Projet 3</h3>
       </div>
-      <div className='skills'>
+      <div className='skills' id='skills'>
         <h2>Compétences</h2>
           <h3>HTML</h3>
           <h3>CSS</h3>
@@ -30,14 +31,15 @@ function App() {
           <h3>MongoDB</h3>
           <h3>Git</h3>
           <h3>Figma</h3>
+          <h3>SCSS</h3>
       </div>
-      <div className='education'>
+      <div className='education' id='education'>
         <h2>Formation</h2>
           <h3>Baccalauréat scientifique</h3>
           <h3>BTS électrotechnique</h3>
           <h3>Intégrateur Web (openclassrooms)</h3>
       </div>
-      <div className='contact'>
+      <div className='contact' id='contact'>
         <h2>Contact</h2>
       </div>
     </>
