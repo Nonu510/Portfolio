@@ -1,15 +1,14 @@
 import React from 'react'
 import './App.css'
 import './styles.css'
+import Banner from './components/banner/banner'
 
 function App() {
 
   return (
     <>
       <div className='banner' id='home'>
-        <h1>DUBOURG Nolwenn</h1>
-        <h2>Développeur front-end</h2>
-        <p>Je suis passionnée par la création de sites web et d'applications interactives.</p>
+        <Banner />
       </div>
       <div className='about' id='about'>
         <h2>À propos de moi</h2>

@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 import Header from './components/header/header.jsx'
@@ -9,7 +9,7 @@ import Error from './pages/error/error.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Router basename={import.meta.env.BASE_URL}>
+    <Router>
         <Header />
               <Routes>
                   <Route path="/" element={<App />} />
