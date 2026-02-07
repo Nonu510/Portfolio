@@ -1,0 +1,39 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color-bg-alt);
+    color: white;
+    margin-top: 50px;
+
+    .footer-logo img {
+        height: 50px;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+        
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    .footer-socials {
+        display: flex;
+        gap: 20px;
+
+        img {
+            height: 30px;
+            transition: transform 0.3s ease;
+            
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+}

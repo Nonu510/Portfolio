@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: solid 2px var(--color-border-soft);
+  background: var(--color-bg-alt);
 }
 .header img {
   width: 50px;
@@ -16,6 +17,13 @@
   padding: 10px 20px;
   font-size: 15px;
   margin: 0;
+}
+.header li {
+  transition: transform 0.3s ease;
+}
+.header li:hover {
+  transform: scale(1.2);
+  color: var(--color-accent-primary);
 }
 .header .header_logo {
   display: flex;

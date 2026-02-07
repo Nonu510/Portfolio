@@ -2,6 +2,8 @@ import React from 'react'
 import './App.css'
 import './styles.css'
 import Banner from './components/banner/banner.jsx'
+import Project from './components/project/project.jsx'
+import ProjectItem from './components/project_item/project_item.jsx';
 
 function App() {
 
@@ -17,9 +19,7 @@ function App() {
         </div>
         <div className='projects' id='projects'>
           <h2>Projets</h2>
-            <h3>Projet 1</h3>
-            <h3>Projet 2</h3>
-            <h3>Projet 3</h3>
+            <Project />
         </div>
         <div className='skills' id='skills'>
           <h2>Compétences</h2>

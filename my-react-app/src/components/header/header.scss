@@ -4,6 +4,7 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: solid 2px var(--color-border-soft);
+    background: var(--color-bg-alt);
     img {
         width: 50px;
     }
@@ -15,6 +16,14 @@
         padding: 10px 20px;
         font-size: 15px;
         margin: 0;
+    }
+    li {
+        transition: transform 0.3s ease;
+        
+        &:hover {
+            transform: scale(1.2);
+            color: var(--color-accent-primary);
+        }
     }
     .header_logo {
         display: flex;
