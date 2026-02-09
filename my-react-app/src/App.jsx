@@ -4,6 +4,7 @@ import './styles.css'
 import Banner from './components/banner/banner.jsx'
 import Project from './components/project/project.jsx'
 import Skills from './components/skills/skills.jsx'
+import Formation from './components/formation/formation.jsx'
 
 function App() {
 
@@ -24,14 +25,12 @@ function App() {
             <Project />
         </div>
         <div className='skills' id='skills'>
-          <h2>Compétences et outils</h2>
+          <h2>Mes compétences et outils</h2>
           <Skills />
         </div>
           <div className='education' id='education'>
             <h2>Formation</h2>
-              <h3>Baccalauréat scientifique</h3>
-              <h3>BTS électrotechnique</h3>
-              <h3>Intégrateur Web (openclassrooms)</h3>
+            <Formation />
           </div>
           <div className='contact' id='contact'>
             <h2>Contact</h2>

@@ -1,0 +1,43 @@
+.formation-item {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-bg-alt);
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    width: 100%;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+    
+    .formation-item-title {
+        font-weight: bold;
+        color: var(--color-text-primary);
+    }
+    
+    p {
+        color: var(--color-text-secondary);
+        line-height: 1.5;
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        margin-right: 20px;
+        &[alt="Online Icon"] {
+            filter: invert(1);
+        }
+        &[alt="école Icon"] {
+            filter: invert(1);
+        }
+    
+    }
+
+}

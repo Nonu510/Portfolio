@@ -1,0 +1,14 @@
+.formation-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 20px;
+    @media (max-width: 992px) {
+        justify-content: center;
+    }
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
