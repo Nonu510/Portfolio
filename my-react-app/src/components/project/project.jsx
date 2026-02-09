@@ -71,13 +71,13 @@ const Project = () => {
 
   return (
     <section className="projects-grid">
-      {projectData.map((feature, index) => (
+      {projectData.map((project, index) => (
         <ProjectItem
           key={index}
-          iconSrc={feature.iconSrc}
-          iconAlt={feature.iconAlt}
-          title={feature.title}
-          description={feature.description}
+          iconSrc={project.iconSrc}
+          iconAlt={project.iconAlt}
+          title={project.title}
+          description={project.description}
         />
       ))}
     </section>

@@ -3,7 +3,7 @@ import './App.css'
 import './styles.css'
 import Banner from './components/banner/banner.jsx'
 import Project from './components/project/project.jsx'
-import ProjectItem from './components/project_item/project_item.jsx';
+import Skills from './components/skills/skills.jsx'
 
 function App() {
 
@@ -25,6 +25,9 @@ function App() {
         </div>
         <div className='skills' id='skills'>
           <h2>Compétences</h2>
+          <Skills />
+        </div>
+        <div>
             <h3>React</h3>
             <h3>Redux</h3>           
             <h3>HTML</h3>
@@ -38,15 +41,15 @@ function App() {
             <h3>SCSS</h3>
             <h3>Notion</h3>
         </div>
-        <div className='education' id='education'>
-          <h2>Formation</h2>
-            <h3>Baccalauréat scientifique</h3>
-            <h3>BTS électrotechnique</h3>
-            <h3>Intégrateur Web (openclassrooms)</h3>
-        </div>
-        <div className='contact' id='contact'>
-          <h2>Contact</h2>
-        </div>
+          <div className='education' id='education'>
+            <h2>Formation</h2>
+              <h3>Baccalauréat scientifique</h3>
+              <h3>BTS électrotechnique</h3>
+              <h3>Intégrateur Web (openclassrooms)</h3>
+          </div>
+          <div className='contact' id='contact'>
+            <h2>Contact</h2>
+          </div>
       </div>
     </>
   )

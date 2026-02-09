@@ -1,83 +1,104 @@
 import React from 'react';
-import ProjectItem from '../project_item/project_item.jsx';
-import './project.scss';
-import events from '../../assets/724events.png';
-import Booki from '../../assets/Booki.png';
-import argentbank from '../../assets/argentbank.png';
-import Kasa from '../../assets/Kasa.png';
-import ninacarducci from '../../assets/ninacarducci.png';
-import Ohmy from '../../assets/Ohmyfood.png';
-import Print from '../../assets/printit.png';
-import Qwenta from '../../assets/qwenta.png';
-import Sophie from '../../assets/sophiebluel.png';
+import SkillsItem from '../skills_item/skills_item';
+import './skills.scss';
+import react from '../../assets/logospec/react-1-logo-svgrepo-com.svg';
+import redux from '../../assets/logospec/redux-svgrepo-com.svg';
+import html from '../../assets/logospec/html-5-svgrepo-com.svg';
+import css from '../../assets/logospec/css3-02-svgrepo-com.svg';
+import javascript from '../../assets/logospec/javascript-svgrepo-com.svg';
+import nodejs from '../../assets/logospec/node-js-svgrepo-com.svg';
+import mongoDB from '../../assets/logospec/mongo-svgrepo-com.svg';
+import git from '../../assets/logospec/git-svgrepo-com.svg';
+import github from '../../assets/logospec/github-142-svgrepo-com.svg';
+import figma from '../../assets/logospec/figma-svgrepo-com.svg';
+import scss from '../../assets/logospec/sass-svgrepo-com.svg';
+import notion from '../../assets/logospec/notion-svgrepo-com.svg';
 
 const Skills = () => {
   const skillsData = [
     {
-      iconSrc: events,
-      iconAlt: "724events Icon",
-      title: "724events",
+      iconSrc: react,
+      iconAlt: "React Icon",
+      title: "React",
       description: "Projet de debugg d'une page web pour une agence d'évenmentiel"
     },
     {
-      iconSrc: Booki,
-      iconAlt: "Booki Icon",
-      title: "Booki",
+      iconSrc: redux,
+      iconAlt: "Redux Icon",
+      title: "Redux",
       description: "Création à partir d'HTML et CSS d'une page de réservation d'hotel et de location de vacances"
     },
     {
-      iconSrc: Kasa,
-      iconAlt: "Kasa Icon",
-      title: "Kasa",
+      iconSrc: html,
+      iconAlt: "HTML Icon",
+      title: "HTML",
       description: "Création d'une application web de location immobilière avec React."
     },
     {
-      iconSrc: argentbank,
+      iconSrc: css,
       iconAlt: "ArgentBank Icon",
       title: "Argent Bank",
       description: "Implémentation du Front-end d'une application bancaire avec React et Redux pour la gestion de l'état global de l'application"
     },
     {
-      iconSrc: ninacarducci,
-      iconAlt: "Nina Carducci Icon",
-      title: "Nina Carducci",
+      iconSrc: javascript,
+      iconAlt: "JavaScript Icon",
+      title: "JavaScript",
       description: "Optimisation du référencement du portfolio de Nina Carducci, photographe et designer."
     },
     {
-      iconSrc: Ohmy,
-      iconAlt: "Oh My Food Icon",
-      title: "Oh My Food",
-      description: "Amélioration del'interface d'un site mobile avec des animations CSS"
+      iconSrc: mongoDB,
+      iconAlt: "MongoDB Icon",
+      title: "MongoDB",
+      description: "Utilisation de MongoDB pour la gestion des données d'une application web."
     },
     {
-      iconSrc: Print,
-      iconAlt: "Print It Icon",
-      title: "Print It",
-      description: "Modification du code HTML et implémentation d'un carrousel avec JavaScript pour une page de service d'impression en ligne"
+      iconSrc: nodejs,
+      iconAlt: "Node.js Icon",
+      title: "Node.js",
+      description: "Création d'une API REST avec Node.js et Express pour une application web."
     },
     {
-      iconSrc: Qwenta,
-      iconAlt: "Qwenta Icon",
-      title: "Qwenta",
-      description: "Our innovative platform offers a seamless experience for all your printing needs."
+      iconSrc: git,
+      iconAlt: "Git Icon",
+      title: "Git",
+      description: "Utilisation de Git pour le contrôle de version d'un projet web."
     },
     {
-      iconSrc: Sophie,
-      iconAlt: "Sophie Bluel Icon",
-      title: "Sophie Bluel",
-      description: "Création d'un portfolio avec Javascript, à partir d'une version HTML et CSS."
+      iconSrc: github,
+      iconAlt: "GitHub Icon",
+      title: "GitHub",
+      description: "Utilisation de GitHub pour le dépôt et le partage de code d'un projet web."
+    },
+    {
+      iconSrc: figma,
+      iconAlt: "Figma Icon",
+      title: "Figma",
+      description: "Utilisation de Figma pour la création de maquettes et de designs d'interfaces utilisateur."
+    },
+    {
+      iconSrc: scss,
+      iconAlt: "SCSS Icon",
+      title: "SCSS",
+      description: "Utilisation de SCSS pour le style et le design d'une application web."
+    },
+    {
+      iconSrc: notion,
+      iconAlt: "Notion Icon",
+      title: "Notion",
+      description: "Utilisation de Notion pour la gestion de documents et de projets."
     },
   ];
 
   return (
     <section className="projects-grid">
-      {skillsData.map((feature, index) => (
-        <ProjectItem
+      {skillsData.map((skills, index) => (
+        <SkillsItem
           key={index}
-          iconSrc={feature.iconSrc}
-          iconAlt={feature.iconAlt}
-          title={feature.title}
-          description={feature.description}
+          iconSrc={skills.iconSrc}
+          iconAlt={skills.iconAlt}
+          title={skills.title}
+          description={skills.description}
         />
       ))}
     </section>
