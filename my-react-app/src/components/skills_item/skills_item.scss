@@ -1,0 +1,36 @@
+.skills-item {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg-alt);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+    
+    .skills-icon {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+        background-color: white;
+        border-radius: 10px;
+    }
+    
+    .skills-item-title {
+        margin: 15px 0 5px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--color-accent-primary);
+    }
+    
+    p {
+        margin: 0 0 10px;
+        color: var(--color-text-secondary);
+        line-height: 1.5;
+    }
+}

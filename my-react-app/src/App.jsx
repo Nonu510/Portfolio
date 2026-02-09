@@ -15,7 +15,9 @@ function App() {
       <div className='main-content'>
         <div className='about' id='about'>
           <h2>À propos de moi</h2>
-          <p>Bienvenue sur mon portfolio ! Je m'appelle Nolwenn Dubourg et je suis développeur front-end. J'adore transformer des idées en expériences numériques attrayantes et fonctionnelles. </p>
+          <p>Je m'appelle <span>Nolwenn Dubourg</span> et je suis <span>développeur front-end</span> sur Caen.<br />
+            J'adore transformer des idées en expériences numériques <span>attrayantes et fonctionnelles</span>.<br />
+            Toujours en recherche de nouveaux <span>challenges</span> et <span>d'apprentissage continu</span>.</p>
         </div>
         <div className='projects' id='projects'>
           <h2>Projets</h2>
@@ -23,15 +25,18 @@ function App() {
         </div>
         <div className='skills' id='skills'>
           <h2>Compétences</h2>
+            <h3>React</h3>
+            <h3>Redux</h3>           
             <h3>HTML</h3>
             <h3>CSS</h3>
-            <h3>JavaScript</h3>
-            <h3>React</h3>
+            <h3>JavaScript</h3>           
             <h3>Node.js</h3>
             <h3>MongoDB</h3>
             <h3>Git</h3>
+            <h3>Github</h3>
             <h3>Figma</h3>
             <h3>SCSS</h3>
+            <h3>Notion</h3>
         </div>
         <div className='education' id='education'>
           <h2>Formation</h2>
