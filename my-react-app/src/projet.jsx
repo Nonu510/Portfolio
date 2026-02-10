@@ -22,4 +22,3 @@ const Projet = () => {
 };
 
 export default Projet;
-
