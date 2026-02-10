@@ -9,7 +9,7 @@ const Formation = () => {
     {
       iconSrc: online,
       iconAlt: "Online Icon",
-      title: "Intégrateur Web (openclassrooms)",
+      title: "Intégrateur Web",
       description: "OpenClassrooms (online)"
     },
     {

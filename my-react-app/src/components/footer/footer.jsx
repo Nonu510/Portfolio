@@ -9,7 +9,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-logo">
-        <a href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
+        <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
           <img src={logo} alt="Logo" />
         </a>
       </div>
