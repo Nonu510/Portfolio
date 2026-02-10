@@ -10,7 +10,6 @@
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 20px;
-  width: 100%;
 }
 .formation-item:hover {
   transform: translateY(-5px);

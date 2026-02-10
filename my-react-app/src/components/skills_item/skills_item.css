@@ -2,9 +2,9 @@
 .skills-wrapper {
   position: relative;
   width: 100%;
-  max-width: 100vw; /* Empêche le conteneur de dépasser la largeur de l'écran */
+  max-width: 100%;
   box-sizing: border-box;
-  padding: 0 20px; /* Ajoute un peu d'espace pour ne pas coller aux bords */
+  overflow: hidden;
 }
 
 .nav-button {

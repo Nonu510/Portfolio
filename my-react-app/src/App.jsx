@@ -5,6 +5,7 @@ import Banner from './components/banner/banner.jsx'
 import Project from './components/project/project.jsx'
 import Skills from './components/skills/skills.jsx'
 import Formation from './components/formation/formation.jsx'
+import Contact from './components/contact/contact.jsx'
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
           </div>
           <div className='contact' id='contact'>
             <h2>Contact</h2>
+            <Contact />
           </div>
       </div>
     </>

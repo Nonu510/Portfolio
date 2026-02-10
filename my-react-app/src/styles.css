@@ -63,6 +63,13 @@ h1, h2, h3 {
   box-shadow: var(--shadow-glow-accent);
 }
 
+input::placeholder { 
+  color: var(--color-text-muted);
+}
+
+textarea::placeholder {
+  color: var(--color-text-muted);
+}
 
 input, textarea {
   background: var(--color-bg-input);

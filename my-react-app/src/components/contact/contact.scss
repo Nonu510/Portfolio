@@ -1,0 +1,48 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 1rem;
+  width: 400px;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    label {
+      font-weight: 600;
+      color: var(--color-text-secondary);
+    }
+
+    input,
+    textarea {
+      padding: 0.8rem;
+      border: 3px solid var(--color-border-soft);
+      border-radius: 5px;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+  }
+
+  .submit-btn {
+    padding: 0.8rem 2rem;
+    background: var(--gradient-accent);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    align-self: flex-start;
+    transition: background-color 0.3s, transform 0.3s;
+    transform: scale(1);
+
+    &:hover {
+      background: var(--color-accent-secondary);
+      transform: scale(1.2);
+    }
+  }
+}
