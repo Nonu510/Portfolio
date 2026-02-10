@@ -13,7 +13,7 @@ function Header() {
 
   return (
     <>
-      <div className='header'>
+      <div className='header' id='header'>
         <div className='header_logo'>
         <img src={logoHeader} alt="Logo Header" />
         </div>
