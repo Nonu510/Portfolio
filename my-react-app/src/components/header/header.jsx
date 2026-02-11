@@ -1,10 +1,11 @@
-import './header.css'
+import './header.scss'
 import logoHeader from '../../assets/logo_header.png'
 import { Link, useLocation } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 function Header() {
   const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     if (location.hash) {
@@ -18,7 +19,12 @@ function Header() {
     }
   }, [location]);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   const scrollToSection = (e, id) => {
+    setIsMenuOpen(false);
     const element = document.getElementById(id);
     if (element) {
       e.preventDefault();
@@ -28,11 +34,22 @@ function Header() {
 
   return (
     <>
-      <div className='header' id='header'>
+      <header className='header' id='header'>
         <div className='header_logo'>
         <img src={logoHeader} alt="Logo Header" />
         </div>
-        <div className='header_menu'>
+        <button 
+          type="button" 
+          className={`navbar-toggle ${isMenuOpen ? '' : 'collapsed'}`} 
+          onClick={toggleMenu}
+          aria-expanded={isMenuOpen}
+        >
+          <span className="sr-only">MENU</span>
+          <span className="icon-bar"></span>
+          <span className="icon-bar"></span>
+          <span className="icon-bar"></span>
+        </button>
+        <div className={`header_menu ${isMenuOpen ? 'open' : ''}`}>
           <nav>
             <ul>
               <li><Link to="/#home" onClick={(e) => scrollToSection(e, 'home')}>Accueil</Link></li>
@@ -44,7 +61,7 @@ function Header() {
             </ul>
           </nav>
         </div>
-      </div>
+      </header>
       
     </>
   )

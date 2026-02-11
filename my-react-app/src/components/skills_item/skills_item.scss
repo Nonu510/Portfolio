@@ -90,4 +90,7 @@
         font-weight: bold;
         color: var(--color-text-primary);
     }
+    @media (max-width: 768px) {
+        min-width: 100px;
+    }
 }

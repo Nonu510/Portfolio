@@ -85,20 +85,26 @@ span {
     color: var(--color-accent-primary);
   }
 
-/* @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap');
 body {
-  /* font-family: 'Helvetica', sans-serif; */
-  font-family: "Playwrite NZ Basic", cursive;
+  font-family: 'Helvetica', sans-serif;
+  /* font-family: "Playwrite NZ Basic", cursive;
   font-optical-sizing: auto;
   font-weight: 400;
-  font-style: italic;
+  font-style: italic; */
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Playwrite NZ Basic", cursive;
+  font-family: 'Helvetica', sans-serif;
+  /* font-family: "Playwrite NZ Basic", cursive;
   font-optical-sizing: auto;
   font-weight: 400;
-  font-style: italic;
+  font-style: italic; */
 }
 

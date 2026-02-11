@@ -85,4 +85,9 @@
   font-size: 1.2rem;
   font-weight: bold;
   color: var(--color-text-primary);
+}
+@media (max-width: 768px) {
+  .skills-item {
+    min-width: 100px;
+  }
 }/*# sourceMappingURL=skills_item.css.map */

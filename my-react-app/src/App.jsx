@@ -11,6 +11,7 @@ function App() {
 
   return (
     <>
+    <main>
       <div className='banner' id='home'>
         <Banner />
       </div>
@@ -38,6 +39,7 @@ function App() {
             <Contact />
           </div>
       </div>
+    </main>
     </>
   )
 }

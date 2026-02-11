@@ -9,6 +9,7 @@
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 20px;
+    width: 100%;
 
     &:hover {
         transform: translateY(-5px);
@@ -38,5 +39,12 @@
         }
     
     }
-
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        img {
+            margin: 0;
+        }
+    }
 }

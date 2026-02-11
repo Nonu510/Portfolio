@@ -10,6 +10,7 @@
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 20px;
+  width: 100%;
 }
 .formation-item:hover {
   transform: translateY(-5px);
@@ -35,4 +36,14 @@
 }
 .formation-item img[alt="école Icon"] {
   filter: invert(1);
+}
+@media (max-width: 768px) {
+  .formation-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .formation-item img {
+    margin: 0;
+  }
 }/*# sourceMappingURL=formation_item.css.map */
