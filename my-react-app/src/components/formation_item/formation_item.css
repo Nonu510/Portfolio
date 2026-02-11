@@ -14,7 +14,7 @@
 }
 .formation-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-glow-accent);
 }
 .formation-item .formation-item-title {
   font-weight: bold;

@@ -16,8 +16,7 @@ const ProjectPage = () => {
       {/* Banner Section */}
       <div className="project-banner">
         <img src={project.iconSrc} alt={project.iconAlt} className="banner-icon" />
-        <h1 className="banner-title">{project.title}</h1>
-        <p className="banner-description">{project.description}</p>
+        <h1 className="banner-description">{project.description}</h1>
       </div>
 
       {/* Content Body */}

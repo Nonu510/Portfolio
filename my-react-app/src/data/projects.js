@@ -81,13 +81,4 @@ export const projectsData = [
     scenario: "En tant que développeur junior, vous avez été embauché par Argent Bank, une institution financière, pour implémenter le front-end de leur application bancaire en utilisant React et Redux. Votre mission est de développer une interface utilisateur intuitive et responsive qui permet aux utilisateurs de gérer leurs comptes bancaires, effectuer des transactions, et consulter leurs relevés. Vous devrez intégrer des fonctionnalités telles que la gestion des utilisateurs, la visualisation des données financières, et l'implémentation de Redux pour gérer l'état global de l'application de manière efficace. Ce projet vous permettra de mettre en pratique vos compétences en React et Redux tout en créant une application bancaire fonctionnelle et sécurisée pour les utilisateurs.",
     details: ""
   },
-  {
-    id: "qwenta",
-    iconSrc: Qwenta,
-    iconAlt: "Qwenta Icon",
-    title: "Qwenta",
-    description: "Planifier le développement du site de Qwenta, une plateforme de services numériques.",
-    scenario: "Vous avez été chargé de remplacer Soufiane en congé maladie et de planifier le développement du site de Qwenta, une plateforme de services numériques.",
-    details: ""
-  },
 ];

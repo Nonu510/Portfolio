@@ -1,6 +1,5 @@
-@charset "UTF-8";
 .hero {
-  background-image: url("../../assets/banière 4.png");
+  background-image: url("../../assets/baniere.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

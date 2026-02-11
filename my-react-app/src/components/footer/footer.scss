@@ -14,6 +14,7 @@
         
         &:hover {
             transform: scale(1.2);
+            box-shadow: var(--shadow-glow-accent);
         }
     }
 
@@ -27,6 +28,7 @@
             
             &:hover {
                 transform: scale(1.2);
+                box-shadow: var(--shadow-glow-accent);
             }
         }
     }

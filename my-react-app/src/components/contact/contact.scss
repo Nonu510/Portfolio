@@ -44,7 +44,7 @@
 
       &:hover {
         transform: translateY(-5px);
-        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        box-shadow: var(--shadow-glow-accent);
       }
 
       h3 {
@@ -64,8 +64,8 @@
         transition: color 0.2s;
 
         &:hover {
-          color: #0056b3;
-          text-decoration: underline;
+          color: var(--color-accent-primary);
+          // text-decoration: underline;
         }
 
         // Style de l'icône FontAwesome

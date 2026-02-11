@@ -42,7 +42,7 @@
 }
 .contact-section .contact-container .contact-info:hover, .contact-section .contact-container .contact-phone:hover, .contact-section .contact-container .contact-linkedin:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-glow-accent);
 }
 .contact-section .contact-container .contact-info h3, .contact-section .contact-container .contact-phone h3, .contact-section .contact-container .contact-linkedin h3 {
   font-size: 1.25rem;
@@ -60,8 +60,7 @@
   transition: color 0.2s;
 }
 .contact-section .contact-container .contact-info a:hover, .contact-section .contact-container .contact-phone a:hover, .contact-section .contact-container .contact-linkedin a:hover {
-  color: #0056b3;
-  text-decoration: underline;
+  color: var(--color-accent-primary);
 }
 .contact-section .contact-container .contact-info a svg, .contact-section .contact-container .contact-phone a svg, .contact-section .contact-container .contact-linkedin a svg {
   font-size: 1.2em;
