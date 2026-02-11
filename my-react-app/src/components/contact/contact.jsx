@@ -1,71 +1,30 @@
-import React, { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import './contact.scss'
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  })
-
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData({
-      ...formData,
-      [name]: value
-    })
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // Ici, vous pourrez connecter un service d'envoi d'email (comme EmailJS) plus tard.
-    console.log('Formulaire envoyé :', formData)
-    alert(`Merci ${formData.name}, votre message a bien été envoyé !`)
-    
-    // Réinitialiser le formulaire
-    setFormData({ name: '', email: '', message: '' })
-  }
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit}>
-      <div className="form-group">
-        <label htmlFor="name">Nom</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          placeholder="Votre nom"
-          required
-        />
+    <section className="contact-section" id="contact">
+      <h2>Contactez-moi</h2>
+      <p className="contact-intro">Vous avez un projet en tête ou souhaitez simplement discuter ? N'hésitez pas à me contacter !</p>
+      <div className="contact-container">
+        <div className="contact-info">
+          <h3>Email</h3>
+          <a href="mailto:nolwenn.dubourg@gmail.com"><FontAwesomeIcon icon={faEnvelope} /> nolwenn.dubourg@gmail.com</a>
+        </div>
+        <div className="contact-phone">
+          <h3>Téléphone</h3>
+          <a href="tel:+33626663305"><FontAwesomeIcon icon={faPhone} /> +33 6 26 66 33 05</a>
+        </div>
+        <div className='contact-linkedin'>
+          <h3>LinkedIn</h3>
+          <a href="https://www.linkedin.com/in/nolwenn-dubourg-224606348/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} /> Nolwenn Dubourg</a>
+        </div>
       </div>
-      <div className="form-group">
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          placeholder="votre@email.com"
-          required
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="message">Message</label>
-        <textarea
-          id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          placeholder="Votre message..."
-          rows="5"
-          required
-        ></textarea>
-      </div>
-      <button type="submit" className="submit-btn">Envoyer</button>
-    </form>
+    </section>
   )
 }
 

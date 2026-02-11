@@ -35,7 +35,6 @@ function App() {
             <Formation />
           </div>
           <div className='contact' id='contact'>
-            <h2>Contact</h2>
             <Contact />
           </div>
       </div>

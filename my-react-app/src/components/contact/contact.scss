@@ -1,48 +1,78 @@
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: left;
-  padding: 1rem;
-  width: 400px;
-
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-
-    label {
-      font-weight: 600;
-      color: var(--color-text-secondary);
-    }
-
-    input,
-    textarea {
-      padding: 0.8rem;
-      border: 3px solid var(--color-border-soft);
-      border-radius: 5px;
-      font-size: 1rem;
-      font-family: inherit;
-    }
+.contact-section {
+  text-align: center;
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
   }
 
-  .submit-btn {
-    padding: 0.8rem 2rem;
-    background: var(--gradient-accent);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    align-self: flex-start;
-    transition: background-color 0.3s, transform 0.3s;
-    transform: scale(1);
+  .contact-intro {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 3rem;
+    text-align: center;
+  }
 
-    &:hover {
-      background: var(--color-accent-secondary);
-      transform: scale(1.2);
+  .contact-container {
+    display: flex;
+    justify-content: space-between; 
+    gap: 2rem; 
+
+    @media screen and (max-width: 1100px) {
+    flex-direction: column;
+    align-items: center
+  } 
+
+    .contact-info, .contact-phone, .contact-linkedin {
+      flex: 1; 
+      min-width: 200px; // Largeur min pour éviter que ce soit trop écrasé sur mobile
+      
+      background: var(--color-bg-input);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05); // Ombre douce moderne
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      @media screen and (max-width: 1100px) {
+        width: 80%;
+      } 
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      }
+
+      h3 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      a {
+        text-decoration: none; 
+        color: var(--color-text-muted);// Couleur principale (à adapter selon votre thème)
+        font-weight: 500;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: color 0.2s;
+
+        &:hover {
+          color: #0056b3;
+          text-decoration: underline;
+        }
+
+        // Style de l'icône FontAwesome
+        svg {
+          font-size: 1.2em;
+        }
+      }
     }
   }
 }
