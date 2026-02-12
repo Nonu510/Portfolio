@@ -6,6 +6,7 @@
   background-color: var(--color-bg-alt);
   color: white;
   margin-top: 50px;
+  box-shadow: var(--shadow-glow-accent);
 }
 .footer .footer-logo img {
   height: 50px;

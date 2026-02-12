@@ -3,9 +3,9 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-bottom: solid 2px var(--color-border-soft);
   background: var(--color-bg-alt);
   position: relative;
+  border-bottom: solid 2px var(--color-border-soft);
 
   .sr-only {
   position: absolute;
@@ -33,7 +33,9 @@
   }
 
   li {
+    /* Use transform/opacity for animations - avoid reflow */
     transition: transform 0.3s ease;
+    will-change: transform;
 
     &:hover {
       transform: scale(1.2);
@@ -43,6 +45,7 @@
 
   .header_logo {
     display: flex;
+    flex-shrink: 0;     /* Prevent reflow on layout shift */
   }
 
   a {
@@ -56,12 +59,12 @@
     border: none;
     cursor: pointer;
     padding: 10px;
+    flex-shrink: 0;     /* Prevent reflow */
 
     @media (max-width: 768px) {
       display: block;
     }
   }
-
 
   &_menu {
     @media (max-width: 768px) {
@@ -74,14 +77,14 @@
       border-bottom: 2px solid var(--color-border-soft);
       z-index: 1000;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      will-change: transform, opacity;
 
       &.open {
         display: block;
-        animation: slideDown 0.3s ease-out;
+        animation: slideDown 0.3s ease-out forwards;
       }
     }
   }
-
 
   @media (max-width: 768px) {
     ul {
@@ -96,6 +99,7 @@
       text-align: center;
       padding: 15px 0;
       border-top: 1px solid var(--color-border-soft);
+      transition: background-color 0.2s ease;
 
       &:hover {
         transform: none;
@@ -105,7 +109,7 @@
   }
 }
 
-// --- Styles Globaux / Utilitaires ---
+/* --- Styles Globaux / Utilitaires --- */
 
 .icon-bar {
   display: block;
@@ -116,9 +120,7 @@
   border-radius: 2px;
 }
 
-// Classe utilitaire sr-only (gardée à la racine pour être accessible par Banner et autres)
-
-
+/* Animation using transform/opacity to avoid reflow */
 @keyframes slideDown {
   from {
     opacity: 0;

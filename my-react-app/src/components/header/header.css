@@ -3,9 +3,9 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-bottom: solid 2px var(--color-border-soft);
   background: var(--color-bg-alt);
   position: relative;
+  border-bottom: solid 2px var(--color-border-soft);
 }
 .header .sr-only {
   position: absolute;
@@ -30,7 +30,9 @@
   margin: 0;
 }
 .header li {
+  /* Use transform/opacity for animations - avoid reflow */
   transition: transform 0.3s ease;
+  will-change: transform;
 }
 .header li:hover {
   transform: scale(1.2);
@@ -38,6 +40,7 @@
 }
 .header .header_logo {
   display: flex;
+  flex-shrink: 0; /* Prevent reflow on layout shift */
 }
 .header a {
   color: var(--gradient-accent);
@@ -49,6 +52,7 @@
   border: none;
   cursor: pointer;
   padding: 10px;
+  flex-shrink: 0; /* Prevent reflow */
 }
 @media (max-width: 768px) {
   .header .navbar-toggle {
@@ -66,10 +70,11 @@
     border-bottom: 2px solid var(--color-border-soft);
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    will-change: transform, opacity;
   }
   .header_menu.open {
     display: block;
-    animation: slideDown 0.3s ease-out;
+    animation: slideDown 0.3s ease-out forwards;
   }
 }
 @media (max-width: 768px) {
@@ -84,6 +89,7 @@
     text-align: center;
     padding: 15px 0;
     border-top: 1px solid var(--color-border-soft);
+    transition: background-color 0.2s ease;
   }
   .header li:hover {
     transform: none;
@@ -91,6 +97,7 @@
   }
 }
 
+/* --- Styles Globaux / Utilitaires --- */
 .icon-bar {
   display: block;
   width: 25px;
@@ -100,6 +107,7 @@
   border-radius: 2px;
 }
 
+/* Animation using transform/opacity to avoid reflow */
 @keyframes slideDown {
   from {
     opacity: 0;

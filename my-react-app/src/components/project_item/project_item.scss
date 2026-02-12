@@ -7,10 +7,10 @@
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 20px;
+    box-shadow: var(--shadow-glow-accent);
 
     &:hover {
         transform: translateY(-5px);
-        box-shadow: var(--shadow-glow-accent);
     }
     
     .project-icon {

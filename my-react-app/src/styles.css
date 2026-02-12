@@ -42,6 +42,11 @@
   --transition-base: 0.3s ease;
 }
 
+/* Optimize scroll behavior - avoid reflow */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--color-bg-main);
   color: var(--color-text-secondary);

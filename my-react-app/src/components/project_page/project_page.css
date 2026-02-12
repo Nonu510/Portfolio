@@ -10,6 +10,7 @@
   flex-direction: column;
   align-items: center;
   gap: 15px;
+  box-shadow: var(--shadow-glow-accent);
 }
 .project-page .project-banner .banner-icon {
   width: 300px;
@@ -41,9 +42,6 @@
   padding: 20px;
   background: var(--color-bg-alt);
   border-radius: 15px;
-}
-.project-page .project-content .content-row:hover {
-  transform: translateY(-5px);
   box-shadow: var(--shadow-glow-accent);
 }
 @media (min-width: 768px) {
@@ -81,7 +79,6 @@
   line-height: 1.6;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: auto;
   -webkit-box-orient: vertical;
 }
 .project-page .project-content .content-row .image-column {

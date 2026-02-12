@@ -1,42 +1,55 @@
 import './header.scss'
-import logoHeader from '../../assets/logo_header.png'
 import { Link, useLocation } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 
 function Header() {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Optimize scroll without reflow - use scroll behavior in CSS
   useEffect(() => {
     if (location.hash) {
       const timer = setTimeout(() => {
         const element = document.getElementById(location.hash.slice(1));
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+          // Use requestAnimationFrame to batch reflow
+          requestAnimationFrame(() => {
+            element.scrollIntoView({ behavior: 'smooth' });
+          });
         }
       }, 100);
       return () => clearTimeout(timer);
     }
   }, [location]);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpen(prev => !prev);
+  }, []);
 
-  const scrollToSection = (e, id) => {
+  const scrollToSection = useCallback((e, id) => {
     setIsMenuOpen(false);
     const element = document.getElementById(id);
     if (element) {
       e.preventDefault();
-      element.scrollIntoView({ behavior: 'smooth' });
+      // Use requestAnimationFrame to batch reflow
+      requestAnimationFrame(() => {
+        element.scrollIntoView({ behavior: 'smooth' });
+      });
     }
-  };
+  }, []);
 
   return (
     <>
       <header className='header' id='header'>
         <div className='header_logo'>
-        <img src={logoHeader} alt="Logo Header" />
+          <picture>
+            <source srcSet="/Portfolio/src/assets/optimized/logo-header.webp" type="image/webp" />
+            <img 
+              src="/Portfolio/src/assets/logo_header.png" 
+              alt="Logo Header"
+              loading="lazy"
+            />
+          </picture>
         </div>
         <button 
           type="button" 

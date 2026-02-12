@@ -35,6 +35,8 @@
   background: var(--color-bg-alt);
   box-sizing: border-box;
   line-height: 1.5;
+  box-shadow: var(--shadow-glow-accent);
+  text-shadow: var(--shadow-glow-accent);
 }
 
 .skills {
