@@ -28,7 +28,7 @@ const ProjectPage = () => {
             <p>{project.scenario}</p>
           </div>
           <div className="image-column">
-            <div className="image-placeholder">Image Scénario</div>
+            <img src={project.imggrl} alt={project.imggrlalt} className="project-image" />
           </div>
         </div>
 
@@ -39,7 +39,7 @@ const ProjectPage = () => {
             <p>{project.details || "Détails à venir..."}</p>
           </div>
           <div className="image-column">
-            <div className="image-placeholder">Image Détail</div>
+            <img src={project.imgdetail} alt={project.imgdetailalt} className="project-image" />
           </div>
         </div>
       </div>
