@@ -15,15 +15,12 @@
 .project-page .project-banner .banner-icon {
   width: 100%;
   height: auto;
-  max-width: 120px;
   max-height: 80px;
   -o-object-fit: contain;
      object-fit: contain;
   display: block;
   margin: 0 auto;
-  background: white;
   border-radius: 10px;
-  padding: 0 4px;
 }
 .project-page .project-banner .banner-title {
   font-size: 2.5rem;
