@@ -106,29 +106,45 @@ async function optimizeImage(config) {
 
   try {
     const image = sharp(inputPath);
-    
     // Obtenir les métadonnées
     const metadata = await image.metadata();
     console.log(`📷 Traitement: ${config.input} (${metadata.width}x${metadata.height})`);
-    
-    // Redimensionner et convertir en WebP (haute qualité)
+
+    // Version principale (768px) - fit: 'contain' pour ne pas rogner
     await sharp(inputPath)
       .resize(config.width, config.height, {
-        fit: 'cover',
-        position: 'center'
+        fit: 'contain',
+        background: { r: 255, g: 255, b: 255, alpha: 1 }
       })
       .webp({ quality: 80 })
       .toFile(path.join(outputDir, `${config.name}.webp`));
-    
-    // Redimensionner et compresser en PNG (fallback)
     await sharp(inputPath)
       .resize(config.width, config.height, {
-        fit: 'cover',
-        position: 'center'
+        fit: 'contain',
+        background: { r: 255, g: 255, b: 255, alpha: 1 }
       })
       .png({ compressionLevel: 9 })
       .toFile(path.join(outputDir, `${config.name}.png`));
-    
+
+    // Version responsive (400px de large, hauteur proportionnelle)
+    if (config.width >= 400) {
+      await sharp(inputPath)
+        .resize(400, null, {
+          fit: 'contain',
+          background: { r: 255, g: 255, b: 255, alpha: 1 }
+        })
+        .webp({ quality: 80 })
+        .toFile(path.join(outputDir, `${config.name}-400.webp`));
+      await sharp(inputPath)
+        .resize(400, null, {
+          fit: 'contain',
+          background: { r: 255, g: 255, b: 255, alpha: 1 }
+        })
+        .png({ compressionLevel: 9 })
+        .toFile(path.join(outputDir, `${config.name}-400.png`));
+      console.log(`  ↳ Version responsive: ${config.name}-400.webp (400px)`);
+    }
+
     console.log(`✅ Optimisé: ${config.name} → ${config.width}x${config.height}`);
   } catch (error) {
     console.error(`❌ Erreur avec ${config.input}:`, error.message);

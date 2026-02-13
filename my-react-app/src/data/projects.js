@@ -1,12 +1,33 @@
-import events from '../assets/724events.png';
-import Booki from '../assets/Booki.png';
-import argentbank from '../assets/argentbank.png';
-import Kasa from '../assets/Kasa.png';
-import ninacarducci from '../assets/ninacarducci.png';
-import Ohmy from '../assets/Ohmyfood.png';
-import Print from '../assets/printit.png';
-import Qwenta from '../assets/qwenta.png';
-import Sophie from '../assets/sophiebluel.png';
+// Import optimized project icons
+import booki from '../assets/optimized/booki.webp';
+import booki400 from '../assets/optimized/booki-400.webp';
+import ohmy from '../assets/optimized/ohmyfood.webp';
+import ohmy400 from '../assets/optimized/ohmyfood-400.webp';
+import print from '../assets/optimized/printit.webp';
+import print400 from '../assets/optimized/printit-400.webp';
+import sophie from '../assets/optimized/sophiebluel.webp';
+import sophie400 from '../assets/optimized/sophiebluel-400.webp';
+import kasa from '../assets/optimized/kasa.webp';
+import kasa400 from '../assets/optimized/kasa-400.webp';
+import ninacarducci from '../assets/optimized/ninacarducci.webp';
+import ninacarducci400 from '../assets/optimized/ninacarducci-400.webp';
+import events from '../assets/optimized/724events.webp';
+import events400 from '../assets/optimized/724events-400.webp';
+import argentbank from '../assets/optimized/argentbank.webp';
+import argentbank400 from '../assets/optimized/argentbank-400.webp';
+
+// Use optimized images instead of importing heavy PNG files
+const projectIcons = {
+  events: { src: events, src400: events400 },
+  booki: { src: booki, src400: booki400 },
+  argentbank: { src: argentbank, src400: argentbank400 },
+  kasa: { src: kasa, src400: kasa400 },
+  ninacarducci: { src: ninacarducci, src400: ninacarducci400 },
+  ohmy: { src: ohmy, src400: ohmy400 },
+  print: { src: print, src400: print400 },
+  sophie: { src: sophie, src400: sophie400 },
+};
+
 import bookidetail from '../assets/projet/bookidetail.webp';
 import bookigrl from '../assets/projet/bookigrl.webp';
 import argentbankdetail from '../assets/projet/argentdetail.webp';
@@ -28,7 +49,7 @@ import eventsgrl from '../assets/projet/724grl.webp';
 export const projectsData = [
   {
     id: "booki",
-    iconSrc: Booki,
+    iconSrc: projectIcons.booki,
     iconAlt: "Booki Icon",
     title: "Booki",
     description: "Création à partir d'HTML et CSS d'une page de réservation d'hotel et de location de vacances",
@@ -41,7 +62,7 @@ export const projectsData = [
   },
   {
     id: "oh-my-food",
-    iconSrc: Ohmy,
+    iconSrc: projectIcons.ohmy,
     iconAlt: "Oh My Food Icon",
     title: "Oh My Food",
     description: "Amélioration de l'interface d'un site mobile avec des animations CSS",
@@ -55,7 +76,7 @@ export const projectsData = [
   },
   {
     id: "print-it",
-    iconSrc: Print,
+    iconSrc: projectIcons.print,
     iconAlt: "Print It Icon",
     title: "Print It",
     description: "Modification du code HTML et implémentation d'un carrousel avec JavaScript pour une page de service d'impression en ligne",
@@ -68,7 +89,7 @@ export const projectsData = [
   },
   {
     id: "sophie-bluel",
-    iconSrc: Sophie,
+    iconSrc: projectIcons.sophie,
     iconAlt: "Sophie Bluel Icon",
     title: "Sophie Bluel",
     description: "Création d'un portfolio avec Javascript, à partir d'une version HTML et CSS.",
@@ -81,7 +102,7 @@ export const projectsData = [
   },
   {
     id: "kasa",
-    iconSrc: Kasa,
+    iconSrc: projectIcons.kasa,
     iconAlt: "Kasa Icon",
     title: "Kasa",
     description: "Création d'une application web de location immobilière avec React.",
@@ -94,7 +115,7 @@ export const projectsData = [
   },
   {
     id: "nina-carducci",
-    iconSrc: ninacarducci,
+    iconSrc: projectIcons.ninacarducci,
     iconAlt: "Nina Carducci Icon",
     title: "Nina Carducci",
     description: "Optimisation du référencement du portfolio de Nina Carducci, photographe et designer.",
@@ -107,7 +128,7 @@ export const projectsData = [
   },
   {
     id: "724events",
-    iconSrc: events,
+    iconSrc: projectIcons.events,
     iconAlt: "724events Icon",
     title: "724events",
     description: "Projet de debugg d'une page web pour une agence d'évenmentiel",
@@ -120,7 +141,7 @@ export const projectsData = [
   },
   {
     id: "argent-bank",
-    iconSrc: argentbank,
+    iconSrc: projectIcons.argentbank,
     iconAlt: "ArgentBank Icon",
     title: "Argent Bank",
     description: "Implémentation du Front-end d'une application bancaire avec React et Redux pour la gestion de l'état global de l'application",

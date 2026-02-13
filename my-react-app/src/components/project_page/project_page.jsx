@@ -15,7 +15,13 @@ const ProjectPage = () => {
     <div className="project-page">
       {/* Banner Section */}
       <div className="project-banner">
-        <img src={project.iconSrc} alt={project.iconAlt} className="banner-icon" />
+        <img 
+          src={project.iconSrc.src} 
+          alt={project.iconAlt} 
+          className="banner-icon"
+          loading="lazy"
+          decoding="async"
+        />
         <h1 className="banner-description">{project.description}</h1>
       </div>
 
@@ -28,7 +34,13 @@ const ProjectPage = () => {
             <p>{project.scenario}</p>
           </div>
           <div className="image-column">
-            <img src={project.imggrl} alt={project.imggrlalt} className="project-image" />
+            <img 
+              src={project.imggrl} 
+              alt={project.imggrlalt} 
+              className="project-image"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
 
@@ -39,7 +51,13 @@ const ProjectPage = () => {
             <p>{project.details || "Détails à venir..."}</p>
           </div>
           <div className="image-column">
-            <img src={project.imgdetail} alt={project.imgdetailalt} className="project-image" />
+            <img 
+              src={project.imgdetail} 
+              alt={project.imgdetailalt} 
+              className="project-image"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
       </div>

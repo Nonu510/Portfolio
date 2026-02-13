@@ -1,6 +1,8 @@
-import './header.scss'
-import { Link, useLocation } from 'react-router-dom'
-import { useEffect, useState, useCallback } from 'react'
+import './header.scss';
+import { Link, useLocation } from 'react-router-dom';
+import { useEffect, useState, useCallback } from 'react';
+import logoHeaderWebp from '../../assets/optimized/logo-header.webp';
+import logoHeaderPng from '../../assets/optimized/logo-header.png';
 
 function Header() {
   const location = useLocation();
@@ -43,11 +45,13 @@ function Header() {
       <header className='header' id='header'>
         <div className='header_logo'>
           <picture>
-            <source srcSet="/Portfolio/src/assets/optimized/logo-header.webp" type="image/webp" />
+            <source srcSet={logoHeaderWebp} type="image/webp" />
             <img 
-              src="/Portfolio/src/assets/logo_header.png" 
+              src={logoHeaderPng}
               alt="Logo Header"
               loading="lazy"
+              width={126}
+              height={126}
             />
           </picture>
         </div>

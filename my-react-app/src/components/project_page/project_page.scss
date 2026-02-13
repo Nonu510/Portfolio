@@ -13,9 +13,16 @@
     box-shadow: var(--shadow-glow-accent);
 
     .banner-icon {
-      width: 300px;
-      height: 150px;
+      width: 100%;
+      height: auto;
+      max-width: 120px;
+      max-height: 80px;
       object-fit: contain;
+      display: block;
+      margin: 0 auto;
+      background: white;
+      border-radius: 10px;
+      padding: 0 4px;
     }
 
     .banner-title {
